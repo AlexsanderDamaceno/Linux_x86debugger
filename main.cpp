@@ -3,7 +3,7 @@
 #include <unistd.h>
 
 #include "library/linenoise/linenoise.h"
-#include "include/debugger.h"
+#include "include/debugger.hpp"
 using namespace std;
 
 

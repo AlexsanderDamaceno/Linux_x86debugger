@@ -38,7 +38,7 @@ void  init_registers();
 unsigned int get_register_value(pid_t pid , reg r);
 void set_register_value(pid_t pid , reg r ,  long value);
 unsigned long  get_register_value_from_dwarf(pid_t pid , reg  regnum);
-reg get_register_from_name(string &name);
+reg get_register_from_name(string name);
 void dump_registers(pid_t  m_pid);
 unsigned long  get_register_value_from_dwarf(pid_t pid ,  string nome);
 

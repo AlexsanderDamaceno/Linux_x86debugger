@@ -28,6 +28,7 @@ class breakpoint{
          void disable();
          auto is_enabled() { return m_enabled;}
          auto get_adress() { return m_addr; }
+         
     private:
         pid_t m_pid;
         std::intptr_t m_addr;

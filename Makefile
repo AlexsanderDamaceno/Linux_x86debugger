@@ -5,8 +5,8 @@ all: debugger.cpp main.cpp library/linenoise/linenoise.c breakpoint.cpp
 	g++   -c -o   breakpoint.o breakpoint.cpp
 	gcc   -c -o linenoise.o library/linenoise/linenoise.c
 	g++   -o dbg main.o debugger.o linenoise.o  registers.o breakpoint.o
-	g++   -no-pie -g -O0 -o example examples_executables/exemplo.cpp
+	g++   -no-pie -g -O0 -o example examples_executables/example.cpp
 
 clean:
 	  rm -f *.o
-		rm dbg  
+		rm dbg

@@ -76,7 +76,7 @@ unsigned long  get_register_value_from_dwarf(pid_t pid , reg  regnum){
 
 }
 
-reg get_register_from_name( string& nome){
+reg get_register_from_name( string nome){
 
   for(int i = 0; i < g_register_descriptors.size(); i++){
       if(nome  == g_register_descriptors[i].name){

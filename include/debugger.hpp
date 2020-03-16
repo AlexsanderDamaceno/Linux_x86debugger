@@ -4,7 +4,7 @@
 #include <vector>
 #include <sstream>
 #include <sys/ptrace.h>
-#include <map>
+#include <unordered_map>
 
 #include "../library/linenoise/linenoise.h"
 #include "breakpoint.hpp"
@@ -27,14 +27,21 @@ class debugger{
             void continue_execution();
             void handle_command(const string &line);
             void set_breakpoint_at_adress(intptr_t addr);
-
+            void wait_for_signal();
+            void step_over_breakpoint();
+            unsigned long get_pc();
+            void set_pc(unsigned long pc);
             unsigned long read_memory(unsigned long adress);
             unsigned long write_memory(unsigned long adress , unsigned long value);
+            void show_breakpoints();
+            void remove_breakpoint(int breakpoint_number);
+
+
 
      private:
          string m_proc_name;
          pid_t m_pid;
-         map< intptr_t , breakpoint> m_breakpoints;
+         unordered_map<intptr_t , breakpoint> m_breakpoints;
 
 };
 

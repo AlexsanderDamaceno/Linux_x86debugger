@@ -1,10 +1,10 @@
 #include <iostream>
 
-using namespace std; 
+using namespace std;
 
 int main(){
 
-  cout << "Testing debugger" << endl; 
-  return; 
- 
+  cout << "Testing debugger" << endl;
+  return 0 ; 
+
 }
